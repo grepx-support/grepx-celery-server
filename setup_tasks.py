@@ -22,7 +22,7 @@ def setup():
         function_name="add",
         description="Add two numbers",
         tags=["math", "celery"],
-        options={"bind": True, "max_retries": 3},
+        options={"bind": False, "max_retries": 3},
     )
 
     storage.add_task(

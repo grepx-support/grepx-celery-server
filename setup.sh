@@ -27,6 +27,7 @@ source "$ACTIVATE_PATH"
 python -m pip install --upgrade pip setuptools wheel
 
 # Install project dependencies
+pip install -r requirements.txt
 pip install -e .
 
 echo "✅ Setup complete. You can now run ./run.sh"
