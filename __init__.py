@@ -1,8 +1,14 @@
-"""Celery app."""
+# src/celery_framework/__init__.py
+"""Generic Celery framework for distributed task execution."""
 
-from grepx_connection_registry import ConnectionFactory
-from .celery_connection import CeleryConnection
+__all__ = [
+    "CeleryConfig",
+    "WorkerConfig",
+    "TaskConfig",
+    "TaskRegistry",
+    "task",
+]
 
-ConnectionFactory.register('celery', CeleryConnection)
-
-__all__ = ["CeleryConnection"]
+from src.config import CeleryConfig, WorkerConfig, TaskConfig
+from src.tasks.decorators import task
+from src.tasks.task_registry import TaskRegistry

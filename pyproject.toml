@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "celery-framework"
+version = "1.0.0"
+description = "A flexible Celery task management framework"
+requires-python = ">=3.10"
+dependencies = [
+    "celery>=5.4.0",
+    "redis>=5.0.1",
+    "hydra-core>=1.3.2",
+    "omegaconf>=2.3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+]
+
+[tool.setuptools]
+packages = ["src"]
